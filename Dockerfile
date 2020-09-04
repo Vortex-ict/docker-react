@@ -1,6 +1,11 @@
+# Dockerfile aanpassingen omdat de app anders niet gedeployed en gestart kan worden binnen de 
+# AWS EBS web app. 
+
+# Refactor van de multistep image naam
 # FROM node:alpine as builder
 FROM node:alpine
 WORKDIR '/app'
+# Refactor dependencies location in docker
 # COPY package.json .
 COPY package.json ./
 RUN npm install
