@@ -1,0 +1,20 @@
+sudo: required
+language: generic
+services:
+  - docker
+
+before install:
+  - docker build -t vortex-ict/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true vortex-ict/docker-react npm run test
+
+# deploy:
+#   provider: elasticbeanstalk
+#   region: "eu-west-1"
+#   app: "docker-react"
+#   env: "DockerReact-env"
+#   bucket_name: "elasticbeanstalk-eu-west-1-762124617171"
+#   bucket_path: "docker-react"
+#   on:
+#     branch: master  
