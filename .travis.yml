@@ -4,7 +4,7 @@ services:
   - docker
 
 before install:
-  - docker build -t vortex-ict/docker-react -f Dockerfile.dev
+  - docker build -t vortex-ict/docker-react -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true vortex-ict/docker-react npm run test
