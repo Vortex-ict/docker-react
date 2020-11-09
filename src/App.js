@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Dit is de code aangepast met de feature branch en merged in master
+          Dit is de originele code
         </p>
         <a
           className="App-link"
