@@ -9,6 +9,7 @@ before install:
 script:
   - docker run -e CI=true vortex-ict/docker-react npm run test
 
+# code wat aangepast
 # deploy:
 #   provider: elasticbeanstalk
 #   region: "eu-west-1"
